@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Search</h1>
+<div mat-dialog-content>
+  <form [formGroup]="searchForm">
+    <mat-form-field appearance="outline">
+      <mat-label>ISBN</mat-label>
+      <input formControlName="isbn" matInput type="number" placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input formControlName="name" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Author</mat-label>
+      <input formControlName="author" matInput placeholder="Placeholder">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="primary" (click)="applyAndSearch()">Search</button>
+  <button mat-stroked-button color="primary" (click)="clearAndSearch()">Clear</button>
+</div>

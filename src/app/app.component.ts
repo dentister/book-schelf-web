@@ -69,7 +69,7 @@ export class AppComponent implements OnInit {
     this.api.deleteBook(isbn)
       .subscribe(()=>{
         this.getBooks();
-        console.log("Book was successfully updated");
+        console.log("Book was successfully removed");
       });
   }
 }
